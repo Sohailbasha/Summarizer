@@ -21,7 +21,7 @@ class TextInputViewController: UIViewController {
     }
     
     @IBOutlet var textView: UITextView!
-    @IBOutlet var textContainerView: UIView!
+    
     @IBOutlet var scanButton: UIButton!
     
     let defaulText = "Type or paste some text or a URL"
@@ -40,9 +40,10 @@ class TextInputViewController: UIViewController {
     
     func setupViews() {
         textView.delegate = self
-        shadowFor(view: textContainerView)
+        shadowFor(view: textView)
         shadowFor(view: scanButton)
         textView.text = defaulText
+//        textView.contentInset = UIEdgeInsetsMake(30, 10, 10, 10)
     }
     
     

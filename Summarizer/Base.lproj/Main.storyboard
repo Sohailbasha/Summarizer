@@ -18,30 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-hv-MdO">
-                                <rect key="frame" x="12" y="90" width="351" height="128"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-pl-DI9">
-                                        <rect key="frame" x="14" y="14" width="323" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
-                                    </textView>
-                                </subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-pl-DI9">
+                                <rect key="frame" x="12" y="75" width="351" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="NsV-pl-DI9" firstAttribute="top" secondItem="6g2-hv-MdO" secondAttribute="top" constant="14" id="1Mv-Qa-rT6"/>
-                                    <constraint firstItem="NsV-pl-DI9" firstAttribute="leading" secondItem="6g2-hv-MdO" secondAttribute="leading" constant="14" id="Rgs-a7-XaF"/>
-                                    <constraint firstAttribute="height" constant="128" id="ZSv-CR-QfR"/>
-                                    <constraint firstAttribute="trailing" secondItem="NsV-pl-DI9" secondAttribute="trailing" constant="14" id="oxO-9T-35h"/>
-                                    <constraint firstAttribute="bottom" secondItem="NsV-pl-DI9" secondAttribute="bottom" constant="14" id="xd4-hi-G2s"/>
-                                </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quc-lF-B5S">
-                                <rect key="frame" x="12" y="234" width="351" height="46"/>
+                                <rect key="frame" x="12" y="185" width="351" height="46"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="gcZ-dq-gxU"/>
+                                    <constraint firstAttribute="height" constant="46" id="gBw-dz-mev"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="summarize">
@@ -51,18 +38,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6g2-hv-MdO" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="E2I-mK-s8t"/>
-                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="quc-lF-B5S" secondAttribute="trailing" constant="12" id="F0c-Wh-obx"/>
-                            <constraint firstItem="quc-lF-B5S" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="abr-cX-wmU"/>
-                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="6g2-hv-MdO" secondAttribute="trailing" constant="12" id="uni-eZ-zBz"/>
-                            <constraint firstItem="6g2-hv-MdO" firstAttribute="top" secondItem="UfE-Xv-mbU" secondAttribute="top" constant="70" id="xI0-qd-SUp"/>
-                            <constraint firstItem="quc-lF-B5S" firstAttribute="top" secondItem="6g2-hv-MdO" secondAttribute="bottom" constant="15.800000000000001" id="y8u-hr-fHn"/>
+                            <constraint firstItem="NsV-pl-DI9" firstAttribute="top" secondItem="UfE-Xv-mbU" secondAttribute="top" constant="55" id="04L-J5-Jcn"/>
+                            <constraint firstItem="quc-lF-B5S" firstAttribute="top" secondItem="NsV-pl-DI9" secondAttribute="bottom" constant="27.23" id="kpG-2c-ytw"/>
+                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="quc-lF-B5S" secondAttribute="trailing" constant="12" id="ohS-Cs-YIl"/>
+                            <constraint firstItem="NsV-pl-DI9" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="uZr-Iz-x0y"/>
+                            <constraint firstItem="quc-lF-B5S" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="wSD-fc-SAu"/>
+                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="bottom" secondItem="quc-lF-B5S" secondAttribute="bottom" constant="436" id="ydh-cM-lON"/>
+                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="NsV-pl-DI9" secondAttribute="trailing" constant="12" id="yp4-MJ-ti0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UfE-Xv-mbU"/>
                     </view>
                     <connections>
                         <outlet property="scanButton" destination="quc-lF-B5S" id="dea-Mz-EjF"/>
-                        <outlet property="textContainerView" destination="6g2-hv-MdO" id="pFJ-in-T0o"/>
                         <outlet property="textView" destination="NsV-pl-DI9" id="JmC-CF-vh0"/>
                     </connections>
                 </viewController>
