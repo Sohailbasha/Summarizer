@@ -43,13 +43,14 @@ class TextInputViewController: UIViewController {
         shadowFor(view: textView)
         shadowFor(view: scanButton)
         textView.text = defaulText
-//        textView.contentInset = UIEdgeInsetsMake(30, 10, 10, 10)
+        let inset: CGFloat = 15
+        textView.textContainerInset = UIEdgeInsetsMake(inset, inset, inset, inset)
     }
     
     
     func shadowFor(view: UIView) {
         view.layer.cornerRadius = 5
-        view.clipsToBounds = false
+        view.clipsToBounds = true
         view.layer.shadowOpacity = 0.1
         view.layer.shadowOffset = CGSize.init(width: 0, height: 4)
     }
