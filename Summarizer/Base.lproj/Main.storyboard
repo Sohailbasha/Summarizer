@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lkC-hH-Umf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Input View Controller-->
+        <scene sceneID="NBf-BI-Efb">
+            <objects>
+                <viewController id="lkC-hH-Umf" customClass="TextInputViewController" customModule="Summarizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="djn-ya-Pqg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-hv-MdO">
+                                <rect key="frame" x="12" y="90" width="351" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-pl-DI9">
+                                        <rect key="frame" x="14" y="14" width="323" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NsV-pl-DI9" firstAttribute="top" secondItem="6g2-hv-MdO" secondAttribute="top" constant="14" id="1Mv-Qa-rT6"/>
+                                    <constraint firstItem="NsV-pl-DI9" firstAttribute="leading" secondItem="6g2-hv-MdO" secondAttribute="leading" constant="14" id="Rgs-a7-XaF"/>
+                                    <constraint firstAttribute="height" constant="128" id="ZSv-CR-QfR"/>
+                                    <constraint firstAttribute="trailing" secondItem="NsV-pl-DI9" secondAttribute="trailing" constant="14" id="oxO-9T-35h"/>
+                                    <constraint firstAttribute="bottom" secondItem="NsV-pl-DI9" secondAttribute="bottom" constant="14" id="xd4-hi-G2s"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quc-lF-B5S">
+                                <rect key="frame" x="12" y="234" width="351" height="46"/>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="gcZ-dq-gxU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="summarize">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6g2-hv-MdO" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="E2I-mK-s8t"/>
+                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="quc-lF-B5S" secondAttribute="trailing" constant="12" id="F0c-Wh-obx"/>
+                            <constraint firstItem="quc-lF-B5S" firstAttribute="leading" secondItem="UfE-Xv-mbU" secondAttribute="leading" constant="12" id="abr-cX-wmU"/>
+                            <constraint firstItem="UfE-Xv-mbU" firstAttribute="trailing" secondItem="6g2-hv-MdO" secondAttribute="trailing" constant="12" id="uni-eZ-zBz"/>
+                            <constraint firstItem="6g2-hv-MdO" firstAttribute="top" secondItem="UfE-Xv-mbU" secondAttribute="top" constant="70" id="xI0-qd-SUp"/>
+                            <constraint firstItem="quc-lF-B5S" firstAttribute="top" secondItem="6g2-hv-MdO" secondAttribute="bottom" constant="15.800000000000001" id="y8u-hr-fHn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UfE-Xv-mbU"/>
+                    </view>
+                    <connections>
+                        <outlet property="scanButton" destination="quc-lF-B5S" id="dea-Mz-EjF"/>
+                        <outlet property="textContainerView" destination="6g2-hv-MdO" id="pFJ-in-T0o"/>
+                        <outlet property="textView" destination="NsV-pl-DI9" id="JmC-CF-vh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhK-Dc-fGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="77.811094452773617"/>
+        </scene>
+    </scenes>
+</document>
