@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F523AA1C008A16FABD35075 /* Pods_Summarizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C506330AC2E4C6893E161B2 /* Pods_Summarizer.framework */; };
 		FDF814071FE077EC0055BC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF814061FE077EC0055BC00 /* AppDelegate.swift */; };
 		FDF8140C1FE077EC0055BC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF8140A1FE077EC0055BC00 /* Main.storyboard */; };
 		FDF8140E1FE077EC0055BC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF8140D1FE077EC0055BC00 /* Assets.xcassets */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C506330AC2E4C6893E161B2 /* Pods_Summarizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summarizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64F06C0F8F4F937190BF875 /* Pods-Summarizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summarizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer.debug.xcconfig"; sourceTree = "<group>"; };
+		AD88B6479563F3867A554034 /* Pods-Summarizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summarizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer.release.xcconfig"; sourceTree = "<group>"; };
 		FDF814031FE077EC0055BC00 /* Summarizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summarizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF814061FE077EC0055BC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF8140B1FE077EC0055BC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F523AA1C008A16FABD35075 /* Pods_Summarizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6879BDC8E1FF364035051363 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C506330AC2E4C6893E161B2 /* Pods_Summarizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B75BA75C9733BC1DDC54C9CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A64F06C0F8F4F937190BF875 /* Pods-Summarizer.debug.xcconfig */,
+				AD88B6479563F3867A554034 /* Pods-Summarizer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FDF813FA1FE077EC0055BC00 = {
 			isa = PBXGroup;
 			children = (
 				FDF814051FE077EC0055BC00 /* Summarizer */,
 				FDF814041FE077EC0055BC00 /* Products */,
+				B75BA75C9733BC1DDC54C9CA /* Pods */,
+				6879BDC8E1FF364035051363 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF814151FE077EC0055BC00 /* Build configuration list for PBXNativeTarget "Summarizer" */;
 			buildPhases = (
+				2210E07C797C0BE81B0A663B /* [CP] Check Pods Manifest.lock */,
 				FDF813FF1FE077EC0055BC00 /* Sources */,
 				FDF814001FE077EC0055BC00 /* Frameworks */,
 				FDF814011FE077EC0055BC00 /* Resources */,
+				7CA80EAA3C2DBC1CF1EB88AA /* [CP] Embed Pods Frameworks */,
+				B65156F32F8DD98C769C5453 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2210E07C797C0BE81B0A663B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summarizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA80EAA3C2DBC1CF1EB88AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Reductio/Reductio.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reductio.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65156F32F8DD98C769C5453 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDF813FF1FE077EC0055BC00 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		FDF814161FE077EC0055BC00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A64F06C0F8F4F937190BF875 /* Pods-Summarizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		FDF814171FE077EC0055BC00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD88B6479563F3867A554034 /* Pods-Summarizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
