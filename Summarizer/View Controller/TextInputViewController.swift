@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reductio
 
 class TextInputViewController: UIViewController {
 
@@ -21,26 +22,33 @@ class TextInputViewController: UIViewController {
     }
     
     @IBOutlet var textView: UITextView!
-    
     @IBOutlet var scanButton: UIButton!
-    
     let defaulText = "Type or paste some text or a URL"
 
-    /*
+    @IBAction func buttonTapped(_ sender: Any) {
+        if let text = textView.text {
+            summarize(text: text, compression: 0.95, completion: { (summary) in
+                print(summary)
+            })
+        }
+    }
+    
+    
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showSummary" {
+//            if let destinationVC = 
+        }
     }
-    */
+    
     
 
     
     func setupViews() {
         textView.delegate = self
-        shadowFor(view: textView)
+//        shadowFor(view: textView)
         shadowFor(view: scanButton)
         textView.text = defaulText
         let inset: CGFloat = 15
@@ -50,7 +58,7 @@ class TextInputViewController: UIViewController {
     
     func shadowFor(view: UIView) {
         view.layer.cornerRadius = 5
-        view.clipsToBounds = true
+        view.clipsToBounds = false
         view.layer.shadowOpacity = 0.1
         view.layer.shadowOffset = CGSize.init(width: 0, height: 4)
     }

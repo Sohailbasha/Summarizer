@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F523AA1C008A16FABD35075 /* Pods_Summarizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C506330AC2E4C6893E161B2 /* Pods_Summarizer.framework */; };
+		FD6F4F231FE1AAB400F3037D /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F4F221FE1AAB400F3037D /* SummaryViewController.swift */; };
 		FDF814071FE077EC0055BC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF814061FE077EC0055BC00 /* AppDelegate.swift */; };
 		FDF8140C1FE077EC0055BC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF8140A1FE077EC0055BC00 /* Main.storyboard */; };
 		FDF8140E1FE077EC0055BC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF8140D1FE077EC0055BC00 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		8C506330AC2E4C6893E161B2 /* Pods_Summarizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summarizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64F06C0F8F4F937190BF875 /* Pods-Summarizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summarizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer.debug.xcconfig"; sourceTree = "<group>"; };
 		AD88B6479563F3867A554034 /* Pods-Summarizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summarizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summarizer/Pods-Summarizer.release.xcconfig"; sourceTree = "<group>"; };
+		FD6F4F221FE1AAB400F3037D /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		FDF814031FE077EC0055BC00 /* Summarizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summarizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF814061FE077EC0055BC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF8140B1FE077EC0055BC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD6F4F241FE1AACE00F3037D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDF814181FE0783F0055BC00 /* TextInputViewController.swift */,
+				FD6F4F221FE1AAB400F3037D /* SummaryViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		FDF813FA1FE077EC0055BC00 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF814061FE077EC0055BC00 /* AppDelegate.swift */,
-				FDF814181FE0783F0055BC00 /* TextInputViewController.swift */,
+				FD6F4F241FE1AACE00F3037D /* View Controller */,
 				FDF8140A1FE077EC0055BC00 /* Main.storyboard */,
 				FDF8140D1FE077EC0055BC00 /* Assets.xcassets */,
 				FDF8140F1FE077EC0055BC00 /* LaunchScreen.storyboard */,
@@ -219,6 +230,7 @@
 			files = (
 				FDF814191FE0783F0055BC00 /* TextInputViewController.swift in Sources */,
 				FDF814071FE077EC0055BC00 /* AppDelegate.swift in Sources */,
+				FD6F4F231FE1AAB400F3037D /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
