@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Reductio
 
 class TextInputViewController: UIViewController {
 
@@ -26,11 +25,11 @@ class TextInputViewController: UIViewController {
     let defaulText = "Type or paste some text or a URL"
 
     @IBAction func buttonTapped(_ sender: Any) {
-        if let text = textView.text {
-            summarize(text: text, compression: 0.95, completion: { (summary) in
-                print(summary)
-            })
-        }
+//        if let text = textView.text {
+//            summarize(text: text, compression: 0.95, completion: { (summary) in
+//                print(summary)
+//            })
+//        }
     }
     
     
@@ -39,7 +38,11 @@ class TextInputViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSummary" {
-//            if let destinationVC = 
+            if let destinationVC = segue.destination as? SummaryViewController {
+                if let text = self.textView.text {
+                    destinationVC.updateVC(text: text)
+                }
+            }
         }
     }
     

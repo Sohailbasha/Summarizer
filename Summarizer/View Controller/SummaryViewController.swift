@@ -7,29 +7,37 @@
 //
 
 import UIKit
+import Reductio
 
 class SummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var text: String? {
+        didSet {
+            if let unwrappedText = self.text {
+                Reductio.summarize(text: unwrappedText, compression: 0.7, completion: { (summary) in
+                    let joinedString = summary.joined(separator: "\n")
+                    print(joinedString)
+                })
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet var summaryTextView: UITextView!
+    
+    @IBAction func slide(_ sender: UISlider) {
     }
-    */
+    
+    func updateVC(text: String) {
+        self.text = text
+    }
+    
+    func summarize(text: String) {
+        
+    }
+    
 
 }
