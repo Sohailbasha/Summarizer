@@ -39,21 +39,6 @@ class TextInputViewController: UIViewController {
     }
     
     
-    // MARK: - Navigation
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSummary" {
-            if let destinationVC = segue.destination as? SummaryViewController {
-                if let text = self.textView.text {
-                    destinationVC.updateVC(text: text)
-                }
-            }
-        }
-    }
-    */
-    
-
-    
     func setupViews() {
         textView.delegate = self
         shadowFor(view: scanButton)
@@ -91,9 +76,13 @@ extension TextInputViewController: UITextViewDelegate {
         textView.resignFirstResponder()
     }
     
-    func textViewDidChange(_ textView: UITextView) {
-        <#code#>
-    }
+//    func textViewDidChange(_ textView: UITextView) {
+//        let contentSize = textView.contentSize
+//        let maxHeight = self.view.bounds.height / 1.2
+//        while textViewHeightConstraint.constant < maxHeight {
+//            self.textViewHeightConstraint.constant += contentSize.height
+//        }
+//    }
     
     
 }
