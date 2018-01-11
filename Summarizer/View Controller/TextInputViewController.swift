@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reductio
 
 class TextInputViewController: UIViewController {
 
@@ -25,17 +26,19 @@ class TextInputViewController: UIViewController {
     let defaulText = "Type or paste some text or a URL"
 
     @IBAction func buttonTapped(_ sender: Any) {
-//        if let text = textView.text {
-//            summarize(text: text, compression: 0.95, completion: { (summary) in
-//                print(summary)
-//            })
-//        }
+        if let text = textView.text {            
+            summarize(text: text, compression: 0.8, completion: { (sentences) in
+                print(sentences.joined(separator: "\n\n"))
+                DispatchQueue.main.async {
+                    self.textView.text = sentences.joined(separator: "\n\n")
+                }
+            })
+        }
     }
     
     
-    
     // MARK: - Navigation
-
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSummary" {
             if let destinationVC = segue.destination as? SummaryViewController {
@@ -45,13 +48,13 @@ class TextInputViewController: UIViewController {
             }
         }
     }
-    
+    */
     
 
     
     func setupViews() {
         textView.delegate = self
-//        shadowFor(view: textView)
+
         shadowFor(view: scanButton)
         textView.text = defaulText
         let inset: CGFloat = 15
