@@ -21,7 +21,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-pl-DI9">
                                 <rect key="frame" x="12" y="84" width="351" height="74"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quc-lF-B5S">
@@ -35,8 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="lkC-hH-Umf" eventType="touchUpInside" id="pPQ-PS-Xrv"/>
-                                    <segue destination="zDL-j4-hen" kind="show" identifier="showSummary" id="5pA-Y1-DW6"/>
+                                    <action selector="buttonTapped:" destination="lkC-hH-Umf" eventType="touchUpInside" id="Lhi-Z4-8ez"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,40 +59,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhK-Dc-fGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="600.79999999999995" y="77.811094452773617"/>
-        </scene>
-        <!--Summary View Controller-->
-        <scene sceneID="eQ5-Qo-Tpg">
-            <objects>
-                <viewController id="zDL-j4-hen" customClass="SummaryViewController" customModule="Summarizer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d4C-iM-wRR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-ii-cvt">
-                                <rect key="frame" x="12" y="82" width="351" height="482"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.69999999999999996" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Api-t6-9W3">
-                                <rect key="frame" x="14" y="618" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <action selector="slide:" destination="zDL-j4-hen" eventType="valueChanged" id="DUm-Nm-Y49"/>
-                                </connections>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="vh0-ik-6Mw"/>
-                    </view>
-                    <connections>
-                        <outlet property="summaryTextView" destination="0JK-ii-cvt" id="Gbc-ZD-IfO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdm-6R-9Sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1504.8" y="77.811094452773617"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dOg-WE-OZY">
