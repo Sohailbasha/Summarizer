@@ -23,6 +23,8 @@ class TextInputViewController: UIViewController {
     
     @IBOutlet var textView: UITextView!
     @IBOutlet var scanButton: UIButton!
+    @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
+    
     let defaulText = "Type or paste some text or a URL"
 
     @IBAction func buttonTapped(_ sender: Any) {
@@ -54,7 +56,6 @@ class TextInputViewController: UIViewController {
     
     func setupViews() {
         textView.delegate = self
-
         shadowFor(view: scanButton)
         textView.text = defaulText
         let inset: CGFloat = 15
@@ -88,6 +89,10 @@ extension TextInputViewController: UITextViewDelegate {
             textView.text = defaulText
         }
         textView.resignFirstResponder()
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        <#code#>
     }
     
     
